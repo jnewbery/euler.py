@@ -6,13 +6,17 @@ import subprocess
 import sys,os
 from collections import defaultdict as ddict
 
-ALL_USERS = ["user1","user2"] #an array of the users. Each user must have a subdirectory containing their solutions.
-
 def make_command(i,user):
     # function to make the command string.
-    return  ["python","%s/eul%s.py" % user,i]       
+    return  ["python","%s/eul%s.py" % (user,i)]       
 
 def main(params):
+
+    # Get the users
+    users = []
+    for user in open("users.cfg",'r').readlines():
+        users.append(user.rstrip())
+
     # Parse params
     try:
         start = int(params[1])
@@ -24,12 +28,12 @@ def main(params):
         end = 2
     total = (end - start)
     try:
-        if (params[3] == "all") or (params[3] not in ALL_USERS):
-            users = ALL_USERS
+        if (params[3] == "all") or (params[3] not in users):
+            users = users
         else:
             users = [params[3]]
     except:
-        users = ALL_USERS
+        users = users
 
     # Get solutions. Index zero is null
     sols =[False]
@@ -54,6 +58,8 @@ def main(params):
             command = make_command(i,user)
             if command:
                 sol = subprocess.Popen(command,stdout=subprocess.PIPE).stdout.readline().rstrip()
+                if sols[i] == '':
+                    print "no solution in solutions.txt!!!" #update solutions.txt with the correct answer
                 if sol == sols[i]:
                     correctcount += 1
                     print("Correct!",end='\t')
@@ -82,5 +88,7 @@ def main(params):
             print("Game %d: No winner" % i)
 
 if __name__ == "__main__":
-    """Usage - eulers.py <first> <last> <user>|'all'"""
+    """Usage - eulers.py <first> <last> <user>|'all'
+    where <first> is the index of the first euler problem to run and <last> is the last euler problem to run
+    """
     main(sys.argv)
