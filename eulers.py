@@ -8,7 +8,7 @@ from collections import defaultdict as ddict
 
 def make_command(i,user):
     # function to make the command string.
-    return  ["python","%s/eul%s.py" % (user,i)]       
+    return  ["python","%s/%s.py" % (user,i)]       
 
 def main(params):
 
@@ -59,7 +59,7 @@ def main(params):
             if command:
                 sol = subprocess.Popen(command,stdout=subprocess.PIPE).stdout.readline().rstrip()
                 if sols[i] == '':
-                    print "no solution in solutions.txt!!!" #update solutions.txt with the correct answer
+                    print("no solution in solutions.txt!!!") #update solutions.txt with the correct answer
                 if sol == sols[i]:
                     correctcount += 1
                     print("Correct!",end='\t')
