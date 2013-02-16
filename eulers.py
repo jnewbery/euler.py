@@ -1,9 +1,8 @@
 #!/usr/bin/python
 
-from __future__ import print_function
 import datetime
 import subprocess
-import sys,os
+import sys
 from collections import defaultdict as ddict
 
 def make_command(i,user):
