@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from __future__ import print_function
 import datetime
 import subprocess
 import sys
@@ -7,7 +8,7 @@ from collections import defaultdict as ddict
 
 def make_command(i,user):
     # function to make the command string.
-    return  ["python","%s/%s.py" % (user,i)]       
+    return  ["python","user_sols/%s/%s.py" % (user,i)]       
 
 def main(params):
 

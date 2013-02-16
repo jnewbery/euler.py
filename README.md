@@ -1,9 +1,8 @@
-euler.py
-========
+#euler.py
 
 A framework for running Project Euler solution programs competitively.
 
-To set the framework up, add users to the the users.cfg file, add a directory for each user to the base directory and add the user's solution programs to their directory. The user's directory must be named &lt;user&gt; and the solution program must be named &lt;x&gt;.py. The solution program should output just the solution to the problem. Any other output will result in the solution being marked as incorrect.
+To set the framework up, add users to the the users.cfg file, add a directory for each user to the user_sols directory and add the user's solution programs to their directory. The user's directory must be named &lt;user&gt; and the solution program must be named &lt;x&gt;.py. The solution program should output just the solution to the problem. Any other output will result in the solution being marked as incorrect.
 
 ### Extending
 
