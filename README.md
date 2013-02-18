@@ -14,4 +14,4 @@ The solutions.txt file is incomplete.
 
 ### Credits
 
-Originally written by [@jonnynewbs](https://github.com/jonnynewbs), [@markbrenigjones]((https://github.com/markbrenigjones) and [@misterikkit]((https://github.com/misterikkit) in summer 2012. Any value from the project can be attributed to Mark and Jonathan. Any crassness can be attributed to John.
+Originally written by [@jonnynewbs](https://github.com/jonnynewbs), [@markbrenigjones](https://github.com/markbrenigjones) and [@misterikkit](https://github.com/misterikkit) in summer 2012. Any value from the project can be attributed to Mark and Jonathan. Any crassness can be attributed to John.
